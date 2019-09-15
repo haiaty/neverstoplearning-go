@@ -10,6 +10,12 @@ func main() {
 
 	fmt.Println(mystring) // Hi
 
+	// Remenber: a string is a read-only slice of bytes
+	//  When we use len function on a string,
+	//  it calculates the length of that slice
 	fmt.Println(len(mystring)) // 2
+
+	//Strings are immutable
+	mystring[0] = "j" //compile error: cannot assign to mystring[0]
 
 }

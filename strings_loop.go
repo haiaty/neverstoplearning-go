@@ -6,8 +6,6 @@ func main() {
 
 	s := "Hello world!"
 
-	fmt.Println(len(s))
-
 	// result will be
 	// 72   101  108  108  111  32  119  111  114  108  100
 	// these are the decimal value of ASCII/UTF-8 characters in Hello World string
@@ -17,6 +15,8 @@ func main() {
 	// remember:
 	// - In Go, a string is a read-only slice of bytes
 	// - Strings in Go are UTF-8 encoded by default
+	// - all characters are represented in int32 (size of 4 bytes) data type because
+	//   UTF-8 chars can be rappresented from 1 byte to 4 bytes
 
 	for i := 0; i < len(s); i++ {
 		fmt.Println(s[i], " ")
